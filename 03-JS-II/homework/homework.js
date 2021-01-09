@@ -5,6 +5,12 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+  if (x > y){
+    return x;
+  } 
+  else {
+    return y;
+  }
 }
 
 function saludo(idioma) {
@@ -14,18 +20,45 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+  if (idioma === "aleman"){
+    return "Guten Tag!";
+  }
+  else if (idioma === "mandarin"){
+    return "Ni Hao!";
+  }
+  else if (idioma === "ingles"){
+    return "Hello!";
+  }
+  else {
+    return "Hola!";
+  }
 }
 
 function esDiezOCinco(numero) {
     // Devuelve "true" si "numero" es 10 o 5
     // De lo contrario, devuelve "false"
     // Tu código:
+  if (numero === 10 || numero === 5){
+    return true;
+  }
+  else {
+    return false;
+  }
+
+
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero < 50 && numero > 20){
+    return true;
+  } else {
+    return false;   
+  }
+
+
 }
 
 function esEntero(numero) {
@@ -36,6 +69,16 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  var redondeado = Math.floor(numero);
+  if (numero === redondeado){
+    return true;
+  } else {
+    return false;
+  }
+
+
+
+
 }
 
 function fizzBuzz(numero) {
@@ -43,6 +86,25 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  //var numDiv3 = numero / 3;
+  //var numDiv5 = numero / 5;
+  var respuesta = "";
+  if (numero / 3 === Math.floor(numero / 3) ){
+    respuesta = "fizz";
+  }
+  if (numero / 5 === Math.floor(numero / 5) ){
+    respuesta = respuesta + "buzz";
+  }
+  if (respuesta !== ""){
+    return respuesta;
+  } else {
+    return numero;
+  }
+
+  
+
+
+
 }
 
 function esPrimo(numero) {
